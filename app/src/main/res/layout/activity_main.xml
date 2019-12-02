@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/addEvent"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Welcome to Scheduler!"
+        android:textColor="#3F51B5"
+        android:textColorHint="#00FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <Button
+        android:id="@+id/addEvent"
+        android:layout_width="139dp"
+        android:layout_height="58dp"
         android:text="add event"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="625dp" />
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="567dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
