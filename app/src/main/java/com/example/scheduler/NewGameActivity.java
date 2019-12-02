@@ -9,13 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public final class NewGameActivity extends AppCompatActivity {
     @Override
-    @SuppressWarnings("ConstantConditions")
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game);
 
-        CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
-        TextView myDate = (TextView) findViewById(R.id.myDate);
+        CalendarView calendar = findViewById(R.id.calendarView);
+        TextView myDate = findViewById(R.id.myDate);
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
