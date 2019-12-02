@@ -18,7 +18,7 @@ public final class NewGameActivity extends AppCompatActivity {
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String date = (month) + "/" + (dayOfMonth) + "/" + (year);
+                String date = (month + 1) + "/" + (dayOfMonth) + "/" + (year);
                 myDate.setText((date));
             }
         });
