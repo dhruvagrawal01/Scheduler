@@ -1,6 +1,7 @@
 package com.example.scheduler;
 
 import android.os.Bundle;
+import android.widget.CalendarView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +12,7 @@ public final class NewGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game); // app/src/main/res/layout/activity_new_game.xml
 
-
+        CalendarView calendar = findViewById(R.id.calendarView);
 
     }
 }
