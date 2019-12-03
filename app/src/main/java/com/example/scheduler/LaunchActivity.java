@@ -9,7 +9,9 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LaunchActivity extends AppCompatActivity {
-
+    int setYear;
+    int setMonth;
+    int setDayOfMonth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,15 +22,17 @@ public class LaunchActivity extends AppCompatActivity {
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchNewGameActivity(event);
+                launchGameActivity(event);
             }
         });
     }
-    public void launchNewGameActivity(String event) {
+    public void launchGameActivity(String event) {
         Intent intent = new Intent(this, GameActivity.class);
         intent.putExtra("eventName", event);
+        intent.putExtra("month", setMonth);
+        intent.putExtra("year", setYear);
+        intent.putExtra("dayOfMonth", setDayOfMonth);
         startActivity(intent);
-        finish();
     }
 
 }
