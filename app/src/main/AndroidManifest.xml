@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".NewGameActivity" />
         <activity android:name=".LaunchActivity" />
+        <activity android:name=".GameActivity" />
     </application>
 
 </manifest>

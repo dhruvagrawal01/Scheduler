@@ -37,5 +37,6 @@ public final class NewGameActivity extends AppCompatActivity {
     public void addEvent() {
         Intent intent = new Intent(this, LaunchActivity.class);
         startActivity(intent);
+        finish();
     }
 }
