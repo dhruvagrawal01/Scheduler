@@ -1,6 +1,9 @@
 package com.example.scheduler;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
@@ -18,10 +21,21 @@ public final class NewGameActivity extends AppCompatActivity {
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String date = (month + 1) + "/" + (dayOfMonth) + "/" + (year);
+                String date = "    Your selected date: " + (month + 1) + "/" + (dayOfMonth) + "/" + (year);
                 myDate.setText((date));
             }
         });
+        Button createEvent = findViewById(R.id.createEvent);
+        createEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addEvent();
+            }
+        });
 
+    }
+    public void addEvent() {
+        Intent intent = new Intent(this, LaunchActivity.class);
+        startActivity(intent);
     }
 }

@@ -12,5 +12,13 @@
         android:id="@+id/myDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="    Your selected date:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/createEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create event" />
 </LinearLayout>
