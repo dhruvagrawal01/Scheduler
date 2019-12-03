@@ -37,6 +37,13 @@ public final class NewGameActivity extends AppCompatActivity {
                 addEvent();
             }
         });
+        Button viewEvents = findViewById(R.id.viewEvents);
+        viewEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewEvents();
+            }
+        });
 
     }
     public void addEvent() {
@@ -44,6 +51,11 @@ public final class NewGameActivity extends AppCompatActivity {
         intent.putExtra("month", setMonth);
         intent.putExtra("year", setYear);
         intent.putExtra("dayOfMonth", setDayOfMonth);
+        startActivity(intent);
+        finish();
+    }
+    public void viewEvents() {
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
         finish();
     }

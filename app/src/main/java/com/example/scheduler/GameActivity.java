@@ -33,7 +33,7 @@ public final class GameActivity extends AppCompatActivity {
                 String date = "    Your selected date: " + (month + 1) + "/" + (dayOfMonth) + "/" + (year);
                 myDate.setText((date));
                 String event = "    Event on this date: " + (eventName);
-                if (setMonth == month + 1 && setYear == year && setDayOfMonth == dayOfMonth) {
+                if (setMonth == month && setYear == year && setDayOfMonth == dayOfMonth) {
                     eventOnDate.setText((event));
                 }
             }

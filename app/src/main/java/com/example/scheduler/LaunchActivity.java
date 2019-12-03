@@ -27,7 +27,7 @@ public class LaunchActivity extends AppCompatActivity {
         });
     }
     public void launchGameActivity(String event) {
-        Intent intent = new Intent(this, GameActivity.class);
+        Intent intent = new Intent(this, NewGameActivity.class);
         intent.putExtra("eventName", event);
         intent.putExtra("month", setMonth);
         intent.putExtra("year", setYear);
