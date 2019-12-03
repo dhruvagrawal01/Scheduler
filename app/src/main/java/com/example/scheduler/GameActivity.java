@@ -38,5 +38,17 @@ public final class GameActivity extends AppCompatActivity {
                 }
             }
         });
+        Button addNewEvent = findViewById(R.id.addNewEvent);
+        addNewEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addNewEvent();
+            }
+        });
+    }
+    public void addNewEvent() {
+        Intent intent = new Intent(this, NewGameActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
