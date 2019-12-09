@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 import java.time.LocalDate;
+import java.util.Map;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -45,6 +46,7 @@ public final class GameActivity extends AppCompatActivity implements EventsName 
             }
         });
     }
+
     public void addNewEvent() {
         Intent intent = new Intent(this, NewGameActivity.class);
         startActivity(intent);
