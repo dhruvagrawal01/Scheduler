@@ -37,6 +37,13 @@ public final class NewGameActivity extends AppCompatActivity implements Serializ
                 String date = "    Your selected date: " + (month + 1) + "/" + (dayOfMonth) + "/" + (year);
                 myDate.setText((date));
                 String stDate = (year) + "-" + (month + 1) + "-" + (dayOfMonth);
+                if (month + 1 < 10 && dayOfMonth < 10) {
+                    stDate = (year) + "-" + "0" + (month + 1) + "-" + "0" + (dayOfMonth);
+                } else if (month + 1 < 10) {
+                    stDate = (year) + "-" + "0" + (month + 1) + "-" + (dayOfMonth);
+                } else if (dayOfMonth < 10) {
+                    stDate = (year) + "-" + (month + 1) + "-" + "0" + (dayOfMonth);
+                }
                 localDate = LocalDate.parse(stDate);
             }
 

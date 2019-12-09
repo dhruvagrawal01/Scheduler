@@ -34,8 +34,18 @@ public final class GameActivity extends AppCompatActivity {
                 String date = "    Your selected date: " + (month + 1) + "/" + (dayOfMonth) + "/" + (year);
                 myDate.setText((date));
                 String stDate = (year) + "-" + (month + 1) + "-" + (dayOfMonth);
+                if (month + 1 < 10 && dayOfMonth < 10) {
+                    stDate = (year) + "-" + "0" + (month + 1) + "-" + "0" + (dayOfMonth);
+                } else if (month + 1 < 10) {
+                    stDate = (year) + "-" + "0" + (month + 1) + "-" + (dayOfMonth);
+                } else if (dayOfMonth < 10) {
+                    stDate = (year) + "-" + (month + 1) + "-" + "0" + (dayOfMonth);
+                }
                 eventDate = LocalDate.parse(stDate);
                 String event = "    Event on this date: " + map.get(eventDate);
+                if (map.get(eventDate) == null) {
+                    event = "    Event on this date: No event added";
+                }
                 eventOnDate.setText((event));
             }
         });
