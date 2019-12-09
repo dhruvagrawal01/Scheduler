@@ -8,8 +8,13 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -17,12 +22,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public final class NewGameActivity extends AppCompatActivity implements Serializable {
     LocalDate localDate;
+    Map<LocalDate, String> map = new HashMap<>();
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game);
         CalendarView calendar = findViewById(R.id.calendarView);
         TextView myDate = findViewById(R.id.myDate);
+
+
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -32,7 +40,9 @@ public final class NewGameActivity extends AppCompatActivity implements Serializ
                 String stDate = (year) + "-" + (month + 1) + "-" + (dayOfMonth);
                 localDate = LocalDate.parse(stDate);
             }
+
         });
+
         Button createEvent = findViewById(R.id.createEvent);
         createEvent.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)

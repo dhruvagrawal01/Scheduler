@@ -12,10 +12,12 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.Map;
 
-public class LaunchActivity extends AppCompatActivity implements EventsName {
+public class LaunchActivity extends AppCompatActivity {
     LocalDate localDate;
+    Map<LocalDate, String> map = EventsName.getInstance().map;
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class LaunchActivity extends AppCompatActivity implements EventsName {
         String event = eventName.getText().toString();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
+
         localDate = (LocalDate) bundle.getSerializable("localDate");
         Button enter = findViewById(R.id.enter);
         enter.setOnClickListener(new View.OnClickListener() {

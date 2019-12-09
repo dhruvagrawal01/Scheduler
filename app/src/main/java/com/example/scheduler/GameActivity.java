@@ -16,8 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-public final class GameActivity extends AppCompatActivity implements EventsName {
+public final class GameActivity extends AppCompatActivity {
     LocalDate eventDate;
+    Map<LocalDate, String> map = EventsName.getInstance().map;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
