@@ -25,7 +25,6 @@ public class LaunchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_launch);
         EditText eventName = findViewById(R.id.eventName);
         eventName.setInputType(InputType.TYPE_CLASS_TEXT);
-        String event = eventName.getText().toString();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
@@ -35,6 +34,7 @@ public class LaunchActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
+                String event = eventName.getText().toString();
                 map.put(localDate, event);
                 launchGameActivity();
             }

@@ -22,7 +22,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public final class NewGameActivity extends AppCompatActivity implements Serializable {
     LocalDate localDate;
-    Map<LocalDate, String> map = new HashMap<>();
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
