@@ -16,15 +16,18 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/eventOnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    Event on this date: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/createEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create event" />
 
-    <Button
-        android:id="@+id/viewEvents"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="view events" />
 </LinearLayout>
